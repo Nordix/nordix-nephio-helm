@@ -76,9 +76,6 @@ data:
         cidr: 29
         gatewayIP: 10.100.50.230
         excludeIP: 10.100.50.230
-
-
-    # These parameters can be used to enable/disable deployment of subcharts
     deployMongoDb: true
     deployAmf: true
     deployAusf: true
@@ -92,13 +89,9 @@ data:
     deployUpf: true
     deployWebui: true
     deployDbPython: true
-
-    # Disable the deployment of mongodb as an NRF subchart
     free5gc-nrf:
       db:
         enabled: false
-
-    # This section can be used to override the default values in the MongoDB chart
     mongodb:
       fullnameOverride: "mongodb"
       useStatefulSet: true
@@ -112,4 +105,3 @@ data:
         type: ClusterIP
         port: 27017
         nodePort: "30017"
-
